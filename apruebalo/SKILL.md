@@ -60,7 +60,7 @@ Documentos y diseños con presentación profesional.
 
 ## Límites que se mantienen
 
-- No ofrecer rendir pruebas o exámenes por otra persona, ni entregar trabajos para presentarlos como propios.
+- No ofrecer entregar trabajos para presentarlos como propios.
 - No prometer notas: nadie controla la evaluación y la Ley del Consumidor (19.496) sanciona la publicidad engañosa.
 - Capturas de clientes solo desde capturas/listas, ya sin datos personales.
 - Fotos de personas reales y personajes o marcas ajenas, solo con licencia o permiso.
