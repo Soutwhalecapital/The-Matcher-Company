@@ -46,7 +46,7 @@ Documentos y diseños con presentación profesional.
 | Materiales para relatores | $60.000 | Hasta 15 diapositivas, guía de 5 páginas y evaluación de hasta 10 preguntas con pauta | 5 días hábiles |
 
 - Incluye una ronda de ajustes.
-- Pago: 50 % de abono y 50 % antes de la entrega final.
+- Pago: 30 % de abono y 70 % antes de la entrega final.
 - Los plazos corren desde la recepción de los antecedentes y el abono.
 - Valores en pesos chilenos; los adicionales se cotizan aparte.
 
@@ -58,12 +58,11 @@ Documentos y diseños con presentación profesional.
 - Anuncios pagados: cualquier servicio del catálogo, con la plantilla Oferta-anuncios u otra.
 - Precios, descuentos y promociones se pueden mostrar en las piezas; si un servicio no tiene precio definido, se cotiza por WhatsApp.
 
+
 ## Límites que se mantienen
 
-- No ofrecer entregar trabajos para presentarlos como propios.
-- No prometer notas: nadie controla la evaluación y la Ley del Consumidor (19.496) sanciona la publicidad engañosa.
+- No prometer notas especificas. 
 - Capturas de clientes solo desde capturas/listas, ya sin datos personales.
-- Fotos de personas reales y personajes o marcas ajenas, solo con licencia o permiso.
 
 Antes de entregar cualquier texto, revísalo contra esta lista.
 
