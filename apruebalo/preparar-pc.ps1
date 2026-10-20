@@ -81,15 +81,17 @@ Pop-Location
 $Png = @(Get-ChildItem "$Raiz\salida\ejemplo\*.png" -ErrorAction SilentlyContinue).Count
 
 Paso '4/5 Reglas de marca para Claude Code'
-# La skill se llama cctmc. Si existe la carpeta antigua (apruebalo), se renombra. Un SKILL.md que ya
-# existe no se sobrescribe con el del kit, para no perder cambios; solo se asegura la línea name.
-$Skill = Join-Path $Raiz '.claude\skills\cctmc'
-$SkillAntigua = Join-Path $Raiz '.claude\skills\apruebalo'
-if ((Test-Path $SkillAntigua) -and -not (Test-Path $Skill)) { Rename-Item $SkillAntigua 'cctmc' }
+# La skill se llama ccapb. Si existe una carpeta con un nombre anterior, se renombra. Un SKILL.md que
+# ya existe no se sobrescribe con el del kit, para no perder cambios; solo se asegura la línea name.
+$Skill = Join-Path $Raiz '.claude\skills\ccapb'
+foreach ($NombreAntiguo in 'apruebalo', 'cctmc') {
+    $SkillAntigua = Join-Path $Raiz ".claude\skills\$NombreAntiguo"
+    if ((Test-Path $SkillAntigua) -and -not (Test-Path $Skill)) { Rename-Item $SkillAntigua 'ccapb' }
+}
 New-Item -ItemType Directory -Force -Path $Skill | Out-Null
 $ArchivoSkill = Join-Path $Skill 'SKILL.md'
 $Origen = if (Test-Path $ArchivoSkill) { $ArchivoSkill } else { "$Raiz\kit\SKILL.md" }
-$Texto = (Get-Content $Origen -Raw -Encoding UTF8) -replace '(?m)^name:[^\r\n]*', 'name: cctmc'
+$Texto = (Get-Content $Origen -Raw -Encoding UTF8) -replace '(?m)^name:[^\r\n]*', 'name: ccapb'
 [IO.File]::WriteAllText($ArchivoSkill, $Texto)
 
 Paso '5/5 Notion'
