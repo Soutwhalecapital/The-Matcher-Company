@@ -81,9 +81,16 @@ Pop-Location
 $Png = @(Get-ChildItem "$Raiz\salida\ejemplo\*.png" -ErrorAction SilentlyContinue).Count
 
 Paso '4/5 Reglas de marca para Claude Code'
-$Skill = Join-Path $Raiz '.claude\skills\apruebalo'
+# La skill se llama cctmc. Si existe la carpeta antigua (apruebalo), se renombra. Un SKILL.md que ya
+# existe no se sobrescribe con el del kit, para no perder cambios; solo se asegura la línea name.
+$Skill = Join-Path $Raiz '.claude\skills\cctmc'
+$SkillAntigua = Join-Path $Raiz '.claude\skills\apruebalo'
+if ((Test-Path $SkillAntigua) -and -not (Test-Path $Skill)) { Rename-Item $SkillAntigua 'cctmc' }
 New-Item -ItemType Directory -Force -Path $Skill | Out-Null
-Copy-Item "$Raiz\kit\SKILL.md" (Join-Path $Skill 'SKILL.md') -Force
+$ArchivoSkill = Join-Path $Skill 'SKILL.md'
+$Origen = if (Test-Path $ArchivoSkill) { $ArchivoSkill } else { "$Raiz\kit\SKILL.md" }
+$Texto = (Get-Content $Origen -Raw -Encoding UTF8) -replace '(?m)^name:[^\r\n]*', 'name: cctmc'
+[IO.File]::WriteAllText($ArchivoSkill, $Texto)
 
 Paso '5/5 Notion'
 $Claude = Get-Command claude -ErrorAction SilentlyContinue

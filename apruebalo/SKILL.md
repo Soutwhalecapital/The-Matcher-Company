@@ -1,5 +1,5 @@
 ---
-name: apruebalo
+name: cctmc
 description: Reglas de marca y de producción de contenido de Apruébalo (trabajos académicos y servicios digitales en Chile). Úsala siempre que escribas textos, guiones o piezas de Apruébalo, rellenes o renderices sus plantillas, o prepares publicaciones para Instagram, Facebook, TikTok, Historias o Estados de WhatsApp.
 ---
 
